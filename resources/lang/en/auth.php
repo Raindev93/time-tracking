@@ -16,5 +16,7 @@ return [
     'failed' => 'These credentials do not match our records.',
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'dont_have_account' => 'Don’t have an account? Create one',
+    'already_have_account' => 'Do you have an account? Log in',
+    'create_new_account' => 'Create new Account'
 ];
