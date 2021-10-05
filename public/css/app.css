@@ -1,11 +1,1 @@
-.about i{
-	font-size: 7rem;
-	color: #ff0658;
-}
-.auth-header {
-	background: #ff0658;
-	margin-bottom: 48px;
-}
-.auth-header h1{
-	color: white;
-}
+.about i{color:#ff0658;font-size:7rem}.auth-header{background:#ff0658;margin-bottom:48px}.auth-header h1{color:#fff}

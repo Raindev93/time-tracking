@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TaskController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,13 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-	return redirect()->route('login');
-});
 
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard.get');
+	Route::get('/', [DashboardController::class, 'showDashboard'])->name('dashboard.get.main');
+    Route::post('/tasks/post', [TaskController::class, 'post'])->name('tasks.post');
+    Route::get('/tasks/get-report', [TaskController::class, 'getReport'])->name('tasks.getReport');
+    Route::get('/tasks/get-table', [TaskController::class, 'taskTable'])->name('tasks.taskTable');
 });
 
 Route::middleware([RedirectIfAuthenticated::class])->group(function () {

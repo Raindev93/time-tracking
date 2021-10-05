@@ -16,5 +16,11 @@ return [
     'repeat_password' => 'Repeat password',
     'submit' => 'Submit',
     'login' => 'Login',
-    'register' => 'Register'
+    'register' => 'Register',
+    'title' => 'Title',
+    'comment' => 'Comment',
+    'date' => 'Date',
+    'time_spent' => 'Time spent',
+    'from' => 'From',
+    'to' => 'To'
 ];
